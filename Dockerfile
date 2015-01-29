@@ -13,10 +13,9 @@ RUN mkdir -p /exports
 RUN mkdir -p /etc/sv/nfs
 ADD nfs.init /etc/sv/nfs/run
 ADD nfs.stop /etc/sv/nfs/finish
-
 ADD start.sh /usr/local/bin/start.sh
 
-RUN chmod +x /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh /etc/sv/nfs/finish /etc/sv/nfs/run
 
 VOLUME /exports
 
