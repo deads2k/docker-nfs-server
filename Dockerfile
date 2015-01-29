@@ -11,6 +11,7 @@ RUN apt-get -qy install nfs-kernel-server runit inotify-tools
 RUN mkdir -p /exports
 
 RUN mkdir -p /etc/sv/nfs
+RUN rm -fr /etc/sv/getty-5
 ADD nfs.init /etc/sv/nfs/run
 ADD nfs.stop /etc/sv/nfs/finish
 ADD start.sh /usr/local/bin/start.sh
