@@ -20,8 +20,8 @@ RUN chmod +x /usr/local/bin/start.sh /etc/sv/nfs/finish /etc/sv/nfs/run
 
 VOLUME /exports
 
-EXPOSE 111/udp 
-EXPOSE 111/tcp 
+EXPOSE 111/udp
+EXPOSE 111/tcp
 EXPOSE 2049/udp
 EXPOSE 2049/tcp
 
